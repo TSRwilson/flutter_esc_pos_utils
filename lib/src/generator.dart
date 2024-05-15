@@ -366,7 +366,7 @@ class Generator {
     String text, {
     PosStyles styles = const PosStyles(),
     int linesAfter = 0,
-    bool containsChinese = false,
+    bool containsChinese = true,
     int? maxCharsPerLine,
   }) {
     List<int> bytes = [];
@@ -499,7 +499,7 @@ class Generator {
       int maxCharactersNb = ((toPos - fromPos) / charWidth).floor();
 
       if (!cols[i].containsChinese) {
-        // CASE 1: containsChinese = false
+        // CASE 1: containsChinese = true
         Uint8List encodedToPrint = cols[i].textEncoded != null
             ? cols[i].textEncoded!
             : _encode(cols[i].text);

@@ -8,7 +8,7 @@ class PosColumn {
   PosColumn({
     this.text = '',
     this.textEncoded,
-    this.containsChinese = false,
+    this.containsChinese = true,
     this.width = 2,
     this.styles = const PosStyles(),
   }) {
