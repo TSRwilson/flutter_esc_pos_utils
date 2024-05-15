@@ -369,6 +369,9 @@ class Generator {
     bool containsChinese = true,
     int? maxCharsPerLine,
   }) {
+    if (text.isEmpty) {
+      text = ' ';
+    }
     List<int> bytes = [];
     if (!containsChinese) {
       bytes += _text(
